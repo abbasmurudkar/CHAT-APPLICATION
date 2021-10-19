@@ -1,7 +1,7 @@
 import './App.css';
 import './styles/main.scss'
 import 'rsuite/dist/styles/rsuite-default.css';   //use this default css for rsuite 
-import { Switch, Route } from 'react-router';
+import { Switch} from 'react-router';
 import Signin from './pages/Signin';
 import PrivateRouter from './Components/PrivateRouter';
 import Home from './pages/Home';
