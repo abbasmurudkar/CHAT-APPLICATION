@@ -6,10 +6,10 @@ import firebase from 'firebase/app'
 const Signin = () => {
 
     const onFacebookSignin = () => {
-        SigninWithProvider(new firebase.auth.FacebookAuthProvider)
+        SigninWithProvider(new firebase.auth.FacebookAuthProvider())
     }
     const onGooleSignin = () => {
-        SigninWithProvider(new firebase.auth.GoogleAuthProvider)
+        SigninWithProvider(new firebase.auth.GoogleAuthProvider())
     }
     const SigninWithProvider = async (provider) => {
     try {

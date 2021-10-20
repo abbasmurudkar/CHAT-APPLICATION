@@ -1,8 +1,9 @@
 import React from 'react'
 import { Redirect, Route } from 'react-router';
+import {  useProfile } from '../Context/Profile.context';
 
 const PublicRouter = ({children, ...routeProps}) => {
-    const profile =false;
+    const profile = useProfile()
     if(profile)   // if user created the profile then it will render to home page
     {
         return <Redirect to="/"/>

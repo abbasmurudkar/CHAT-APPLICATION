@@ -6,9 +6,11 @@ import Signin from './pages/Signin';
 import PrivateRouter from './Components/PrivateRouter';
 import Home from './pages/Home';
 import PublicRouter from './Components/PublicRouter';
+import { ProfileProvider } from './Context/Profile.context';
 function App() {
   return (
     <>
+    <ProfileProvider>   {/*PROFILE PROVIDER IS A NORMAL COMPONENT THAT USES THE CONTEXT API IN PROFILE.CONTEXT */}
       <Switch>
         <PublicRouter path="/signin">
           <Signin />
@@ -17,6 +19,7 @@ function App() {
           <Home />
         </PrivateRouter>
       </Switch>
+      </ProfileProvider>
     </>
 
   );
