@@ -3,12 +3,13 @@ import { Redirect, Route } from 'react-router';
 
 const PrivateRouter = ({children,...routeProps}) => {
     const profile =false;
-    if(!profile)   // this condition tell that if we dont have any profile then it will redirect to signin page
+    if(!profile)   // this condition tell that if we dont have any profile then it will redirect to signin page by default it is said to false
     {
         return <Redirect to="/signin"/>
     }
     return (
         <Route {...routeProps} >  {/*this will return the home component when user sign in and its children */}
+
         </Route>
     )
 }

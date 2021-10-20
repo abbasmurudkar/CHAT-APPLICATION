@@ -9,7 +9,7 @@ const PublicRouter = ({children, ...routeProps}) => {
     }
     return (
         <Route {...routeProps} >  {/*this will return the home component when user sign in and its children */}
-
+{children}
         </Route>
     )
 }
