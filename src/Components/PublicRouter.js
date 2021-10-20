@@ -1,10 +1,20 @@
 import React from 'react'
 import { Redirect, Route } from 'react-router';
+import { Container, Loader } from 'rsuite';
 import {  useProfile } from '../Context/Profile.context';
 
 const PublicRouter = ({children, ...routeProps}) => {
-    const profile = useProfile()
-    if(profile)   // if user created the profile then it will render to home page
+    const {profile , isloading} = useProfile()
+
+    if(isloading && !profile)   //if our data isloading and we dont have profile then it will show loader for loading
+    {
+        return (
+        <Container>
+            <Loader center vertical size="md" content="loading" speed="slow"/>
+        </Container>
+        )
+    }
+    if(profile && !isloading)   // if user created the profile then it will render to home page
     {
         return <Redirect to="/"/>
     }
