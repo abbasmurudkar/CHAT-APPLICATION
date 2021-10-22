@@ -4,9 +4,9 @@ import { Container, Loader } from 'rsuite';
 import {  useProfile } from '../Context/Profile.context';
 
 const PublicRouter = ({children, ...routeProps}) => {
-    const {profile , isloading} = useProfile()
+    const {profiles , isloading} = useProfile()
 
-    if(isloading && !profile)   //if our data isloading and we dont have profile then it will show loader for loading
+    if(isloading && !profiles)   //if our data isloading and we dont have profile then it will show loader for loading
     {
         return (
         <Container>
@@ -14,7 +14,7 @@ const PublicRouter = ({children, ...routeProps}) => {
         </Container>
         )
     }
-    if(profile && !isloading)   // if user created the profile then it will render to home page
+    if(profiles && !isloading)   // if user created the profile then it will render to home page
     {
         return <Redirect to="/"/>
     }

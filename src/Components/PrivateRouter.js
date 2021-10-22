@@ -4,9 +4,9 @@ import { Container, Loader } from 'rsuite';
 import { useProfile } from '../Context/Profile.context';
 
 const PrivateRouter = ({ children, ...routeProps }) => {
-    const {profile,isloading}= useProfile()
+    const {profiles,isloading}= useProfile()
 
-    if(isloading && !profile)   //if our data isloading and we dont have profile then it will show loader for loading
+    if(isloading && !profiles)   //if our data isloading and we dont have profile then it will show loader for loading
     {
         return (
         <Container>
@@ -15,7 +15,7 @@ const PrivateRouter = ({ children, ...routeProps }) => {
         )
     }
 
-    if (!profile&&!isloading )   // this condition tell that if we dont have any profile then it will redirect to signin page by default it is said to false
+    if (!profiles&&!isloading )   // this condition tell that if we dont have any profile then it will redirect to signin page by default it is said to false
     //if we dont have profile and data is not loading
     {
         return <Redirect to="/signin" />

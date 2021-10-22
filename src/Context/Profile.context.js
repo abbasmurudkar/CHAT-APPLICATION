@@ -14,7 +14,7 @@ export const ProfileProvider = ({ children }) => {   //EXPORTING A FUNTION FOR C
                 userRef=database.ref(`/profiles/${authObj.uid}`);
                 userRef.on(`value`, (snap) => {   //path for the database for realtime subscription if the data changes in database then the arrow function will invoked every time after changing the data
                     const { name, created } = snap.val()         //here we can see the data which we are retreiving from database and destructuring the data
-                    // console.log(profilesData)
+                    console.log(name,created)
                     const data = {      //data from database
                         name,        //database
                         created,     //database
@@ -27,7 +27,7 @@ export const ProfileProvider = ({ children }) => {   //EXPORTING A FUNTION FOR C
             }
             else {
                 if(userRef){
-                    userRef.off()
+                    userRef.off()    //unsubcribing the data from database as we have use useRef.on so we can off for unsubscribing the data
                 }
                 setProfile(null)
                 setisloading(false)
