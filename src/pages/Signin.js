@@ -21,7 +21,7 @@ const Signin = () => {
                 name:user.displayName,
                 created : firebase.database.ServerValue.TIMESTAMP       //this will provide the time the user has login or created by using this timestamp method
             })
-        } 
+        }  
         Alert.success('SUCCESFULL LOGIN',4000)
     } catch (error) {
         Alert.info(error.message,4000)
