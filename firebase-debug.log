@@ -1,0 +1,73 @@
+[debug] [2021-12-13T14:59:24.170Z] ----------------------------------------------------------------------
+[debug] [2021-12-13T14:59:24.172Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2021-12-13T14:59:24.172Z] CLI Version:   9.18.0
+[debug] [2021-12-13T14:59:24.172Z] Platform:      darwin
+[debug] [2021-12-13T14:59:24.172Z] Node Version:  v14.17.6
+[debug] [2021-12-13T14:59:24.180Z] Time:          Mon Dec 13 2021 20:29:24 GMT+0530 (India Standard Time)
+[debug] [2021-12-13T14:59:24.180Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-13T14:59:24.182Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-12-13T14:59:24.243Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-13T14:59:24.244Z] > authorizing via signed-in user (abbasmurudkar18@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/abbasmurudkar/Desktop/REACTJS/chat
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2021-12-13T14:59:25.068Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-12-13T14:59:25.068Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using chat-app-7b3ef. 
+[debug] [2021-12-13T15:01:20.731Z] > refreshing access token with scopes: []
+[debug] [2021-12-13T15:01:20.732Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-13T15:01:20.930Z] <<< HTTP RESPONSE 200 {"date":"Mon, 13 Dec 2021 15:01:21 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-13T15:01:20.978Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-7b3ef [none]
+[debug] [2021-12-13T15:01:21.507Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-7b3ef 200
+[debug] [2021-12-13T15:01:21.507Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-7b3ef {"projectId":"chat-app-7b3ef","projectNumber":"7755659777","displayName":"CHAT-APP","name":"projects/chat-app-7b3ef","resources":{"hostingSite":"chat-app-7b3ef","realtimeDatabaseInstance":"chat-app-7b3ef-default-rtdb","storageBucket":"chat-app-7b3ef.appspot.com","locationId":"europe-west"},"state":"ACTIVE"}
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2021-12-13T15:01:21.510Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-12-13T15:01:21.510Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-13T15:01:21.716Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 13 Dec 2021 15:01:21 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-13T15:01:21.758Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/chat-app-7b3ef/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-12-13T15:01:23.573Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 13 Dec 2021 15:01:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2021-12-13T15:01:23.575Z] > refreshing access token with scopes: []
+[debug] [2021-12-13T15:01:23.576Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-13T15:01:23.755Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 13 Dec 2021 15:01:23 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-13T15:01:23.803Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-7b3ef [none]
+[debug] [2021-12-13T15:01:24.346Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-7b3ef 200
+[debug] [2021-12-13T15:01:24.346Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chat-app-7b3ef {"projectId":"chat-app-7b3ef","projectNumber":"7755659777","displayName":"CHAT-APP","name":"projects/chat-app-7b3ef","resources":{"hostingSite":"chat-app-7b3ef","realtimeDatabaseInstance":"chat-app-7b3ef-default-rtdb","storageBucket":"chat-app-7b3ef.appspot.com","locationId":"europe-west"},"state":"ACTIVE"}
+[debug] [2021-12-13T15:01:24.347Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-12-13T15:01:24.347Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-13T15:01:24.568Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 13 Dec 2021 15:01:24 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-13T15:01:24.613Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/chat-app-7b3ef/locations/-/instances/chat-app-7b3ef-default-rtdb  
+ 
+[debug] [2021-12-13T15:01:25.256Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 13 Dec 2021 15:01:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 

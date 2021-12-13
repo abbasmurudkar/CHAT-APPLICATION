@@ -28,8 +28,6 @@ function App() {
           <Home/>
         </PrivateRouter>
       </Switch>
-
-
   );
 }
 
