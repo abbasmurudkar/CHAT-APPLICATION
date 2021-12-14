@@ -34,14 +34,14 @@
 //             <Container >
 //                 <Grid className="mt-page">
 //                     <Row>
-//                         <Col xs={24} md={12} mdOffset={6}> {/*xs is a small device screen and md is a medium device screen mdoffset is used to set the columns and bring the material at center*/}
-//                             <Panel>                                     {/*this is used to have the form as a panel in a container */}
+//                         <Col xs={24} md={12} mdOffset={6}> 
+//                             <Panel>                                     
 //                                 <div className="text-center">
 //                                     <h1>WELCOME TO CHAT</h1>
 //                                     <p>Everything you will chat over here</p>
 //                                 </div>
 //                                 <div className="mt-3">
-//                                     <Button block color="blue" onClick={onFacebookSignin}>                {/*the block will take the full width according to parent component */}
+//                                     <Button block color="blue" onClick={onFacebookSignin}>               
 //                                         <Icon icon="facebook" /> Sign in with facebook
 //                                     </Button>
 //                                     <Button block color="green" onClick={onGooleSignin}>
@@ -60,43 +60,56 @@
 
 // export default Signin
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Col, Container, Grid, Icon, Input, InputGroup, Panel, Row } from 'rsuite'
 
 function Signin() {
+    const [passwordhidden, setpassword] = useState(false)
+
+    const Security = () => {
+        setpassword(!passwordhidden)
+    }
     return (
         <Container>
             <Grid className='mt-page'>
                 <Row>
+                    {/*xs is a small device screen and md is a medium device screen mdoffset is used to set the columns and bring the material at center*/}
                     <Col xs={24} md={12} mdOffset={6}>
+                        {/*this is used to have the form as a panel in a container */}
                         <Panel>
                             <div className='text-center'>
                                 <h2>WELCOME TO CHATS</h2>
                                 <p>Progressive chat application</p>
                             </div>
                             <div className='mt-3'>
-                                USERNAME:
-                                <InputGroup>
-                                    <Input type='text' />
-                                    <InputGroup.Button>
-                                        <Icon icon="user" />
-                                    </InputGroup.Button>
-                                </InputGroup>
-                                PASSWORD:
-                                <InputGroup>
-                                    <Input type='password' />
-                                    <InputGroup.Button>
-                                        <Icon icon="eye" />
-                                    </InputGroup.Button>
-                                </InputGroup>
                                 <div className='mt-3'>
-                                    <Button block color="blue">
+                                    <label htmlFor="user">USERNAME:</label>
+                                    <InputGroup>
+                                        <Input type='text' id="user" />
+                                        <InputGroup.Button>
+                                            <Icon icon="user" />
+                                        </InputGroup.Button>
+                                    </InputGroup>
+
+                                    <label htmlFor="pass">PASSWORD:</label>
+                                    <InputGroup>
+                                        <Input type={passwordhidden ? "text" : "password"} id="pass" />
+                                        <InputGroup.Button onClick={Security}>
+                                            <Icon icon={passwordhidden ? "eye" : "eye-slash"} />
+                                        </InputGroup.Button>
+                                    </InputGroup>
+
+                                    <Button type="submit" className='mt-3' color="red">Submit</Button>
+                                </div>
+                                <div className='mt-3'>
+                                    {/*the block will take the full width according to parent component */}
+                                    <Button block color="blue" >
                                         <Icon icon="facebook" /> Login With Facebook
                                     </Button>
                                     <Button block color="green">
                                         <Icon icon="google" /> Login With Google
                                     </Button>
-                                    <Button block color="black">
+                                    <Button block>
                                         <Icon icon="github" /> Login with Github
                                     </Button>
                                 </div>
