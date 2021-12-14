@@ -15,8 +15,7 @@
 //         )
 //     }
 
-//     if (!profiles&&!isloading )   // this condition tell that if we dont have any profile then it will redirect to signin page by default it is said to false
-//     //if we dont have profile and data is not loading
+//     if (!profiles&&!isloading )   
 //     {
 //         return <Redirect to="/signin" />
 //     }
@@ -29,12 +28,25 @@
 
 // export default PrivateRouter
 import React from 'react'
+import { Redirect, Route } from 'react-router';
 
-const PrivateRouter = () => {
+const PrivateRouter = ({children , ...routeProps}) => {
+const Profile = false;
+
+
+// this condition tell that if we dont have any profile then it will redirect to signin page by default it is said to false
+//if we dont have profile and data is not loading
+if(!Profile)                                
+{
+    return <Redirect to="/sigin"/>
+}
+
+
+
     return (
-        <div>
-            
-        </div>
+        <Route {...routeProps}>
+            {children}
+        </Route> 
     )
 }
 
