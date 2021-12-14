@@ -61,12 +61,51 @@
 // export default Signin
 
 import React from 'react'
+import { Button, Col, Container, Grid, Icon, Input, InputGroup, Panel, Row } from 'rsuite'
 
 function Signin() {
     return (
-        <div>
-            signin
-        </div>
+        <Container>
+            <Grid className='mt-page'>
+                <Row>
+                    <Col xs={24} md={12} mdOffset={6}>
+                        <Panel>
+                            <div className='text-center'>
+                                <h2>WELCOME TO CHATS</h2>
+                                <p>Progressive chat application</p>
+                            </div>
+                            <div className='mt-3'>
+                                USERNAME:
+                                <InputGroup>
+                                    <Input type='text' />
+                                    <InputGroup.Button>
+                                        <Icon icon="user" />
+                                    </InputGroup.Button>
+                                </InputGroup>
+                                PASSWORD:
+                                <InputGroup>
+                                    <Input type='password' />
+                                    <InputGroup.Button>
+                                        <Icon icon="eye" />
+                                    </InputGroup.Button>
+                                </InputGroup>
+                                <div className='mt-3'>
+                                    <Button block color="blue">
+                                        <Icon icon="facebook" /> Login With Facebook
+                                    </Button>
+                                    <Button block color="green">
+                                        <Icon icon="google" /> Login With Google
+                                    </Button>
+                                    <Button block color="black">
+                                        <Icon icon="github" /> Login with Github
+                                    </Button>
+                                </div>
+                            </div>
+                        </Panel>
+                    </Col>
+                </Row>
+            </Grid>
+        </Container>
     )
 }
 

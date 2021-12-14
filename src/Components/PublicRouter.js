@@ -14,7 +14,7 @@
 //         </Container>
 //         )
 //     }
-//     if(profiles && !isloading)   // if user created the profile then it will render to home page
+//     if(profiles && !isloading)   
 //     {
 //         return <Redirect to="/"/>
 //     }
@@ -31,10 +31,12 @@ import { Redirect , Route } from 'react-router'
 
 const PublicRouter = ({children , ...routeProps}) => {
      const Profile = false
-    if(Profile)
-    {
-        return <Redirect to="/"/>
-    }
+
+// if user created the profile then it will render to home page or else it will be render sigin page
+if(Profile)
+{
+    return <Redirect to="/"/>
+}
 
     return (
         <Route {...routeProps}>
