@@ -21,12 +21,6 @@ function App() {
             </PrivateRouter>
           </Switch>
           </ProfileProvider> */}
-        <Route path="/sigin">
-          <Signin/>
-        </Route>
-        <PrivateRouter path="/">
-          <Home/>
-        </PrivateRouter>
       </Switch>
   );
 }

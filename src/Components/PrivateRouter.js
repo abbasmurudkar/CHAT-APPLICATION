@@ -28,23 +28,3 @@
 // }
 
 // export default PrivateRouter
-
-import React from 'react'
-import { Redirect, Route } from 'react-router';
-
-const PrivateRouter = ({children , ...routeProps}) => {
-
-    const profile = false;
-
-    if(!profile)
-    {
-        return <Redirect to = "/sigin"/>
-    }
-    return (
-        <Route {...routeProps}>
-            {children}
-        </Route>
-    )
-}
-
-export default PrivateRouter
