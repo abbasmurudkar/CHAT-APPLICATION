@@ -16,10 +16,10 @@ function App() {
       <PrivateRouter path="/">    {/*privaterouter is a component created in components folder and we are giving path for router and it will render when user sign in */}
         <Home/>
         </PrivateRouter>
+        {/* <ProfileProvider>   PROFILE PROVIDER IS A NORMAL COMPONENT THAT USES THE CONTEXT API IN PROFILE.CONTEXT
+          </ProfileProvider> */}
       </Switch>
   );
 }
 export default App;
 
-{/* <ProfileProvider>   PROFILE PROVIDER IS A NORMAL COMPONENT THAT USES THE CONTEXT API IN PROFILE.CONTEXT
-  </ProfileProvider> */}
